@@ -1,10 +1,4 @@
 /build
 /src
 /out
-tests/ПроверкаРежимаБлокировки.epf
-tests/ПроверкаЧтенияНеАдминистраторами.epf
-tests/тесты_КомандныйИнтерфейс.epf
-tests/Тесты_ОткрытиеФормКонфигурации.epf
-tests/тесты_ПроверкаМакетовСКД.epf
-tests/Smoke_InputBasedOn.epf
-tests/Tests_SmokeCommonModules.epf
+
