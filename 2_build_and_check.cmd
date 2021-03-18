@@ -3,6 +3,12 @@
 @rem Обновление основной разработческой ИБ из исходников. по умолчанию в каталоге build/ib
 @call vrunner update-dev --src src/cf %*
 
+@rem Очистка старых результатов тестов allure
+del .\out\allure\smoke\*.json
+
+@rem Очистка старых результатов тестов JUnit
+del .\out\smoke\*.xml
+
 @rem Выходные директории и файлы описаны в файле .env
 @call vrunner syntax-check
 
