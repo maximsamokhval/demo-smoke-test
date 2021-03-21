@@ -1,7 +1,11 @@
 @chcp 65001
 
 @rem Обновление основной разработческой ИБ из исходников. по умолчанию в каталоге build/ib
-@call vrunner update-dev --src src/cf %*
+rem @call vrunner update-dev --src src/cf %*
+
+@rem обновление конфигурации основной разработческой ИБ из хранилища. для включения раскомментируйте код ниже
+call vrunner loadrepo --storage-name "C:/Users/Maxim Samokhval/Documents/development/OnesRepo/smoke_tests" --storage-user demo --storage-pwd demo
+call vrunner updatedb 
 
 @rem Очистка старых результатов тестов allure
 del .\out\allure\smoke\*.json
@@ -10,7 +14,7 @@ del .\out\allure\smoke\*.json
 del .\out\smoke\*.xml
 
 @rem Выходные директории и файлы описаны в файле .env
-@call vrunner syntax-check
+@call vrunner syntax-checker 
 
 @rem Запуск дымовых тестов
 @call vrunner xunit $addRoot/tests/smoke
