@@ -14,7 +14,7 @@ del .\out\allure\smoke\*.json
 del .\out\smoke\*.xml
 
 @rem Выходные директории и файлы описаны в файле .env
-@call vrunner syntax-checker 
+@call vrunner syntax-check
 
 @rem Запуск дымовых тестов
 @call vrunner xunit $addRoot/tests/smoke
