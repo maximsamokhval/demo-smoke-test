@@ -1,11 +1,7 @@
 @chcp 65001
 
 @rem Сборка основной разработческой ИБ. по умолчанию в каталоге build/ib
-call vrunner init-dev --src src/cf %* 
-
-@rem обновление конфигурации основной разработческой ИБ из хранилища. для включения раскомментируйте код ниже
-@rem call vrunner loadrepo %*
-@rem call vrunner updatedb %*
+@call vrunner init-dev --src src/cf %* 
 
 @rem собрать внешние обработчики и отчеты в каталоге build
 @rem call vrunner compileepf src/epf/МояВнешняяОбработка build %*
